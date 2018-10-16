@@ -41,10 +41,10 @@ RUN pip install --upgrade pip
 RUN pip install virtualenv && \
     awscli==1.11.115
 
-# versions of local tools
 RUN node -v
-# NPM version should already be pretty new (> 6.4.0)
 RUN npm -v
 
 RUN npm install cypress --save-dev
 RUN $(npm bin)/cypress verify
+
+# docker run -it --volume=/Users/rory.sedgwick/projects/arup/momo-webforms/:/momo-webforms --workdir="/momo-webforms" --memory=4g --memory-swap=4g --memory-swappiness=0 --entrypoint=/bin/bash mvinsight-webform-build-pipeline
