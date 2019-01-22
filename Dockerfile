@@ -6,7 +6,8 @@ RUN apt-get update && \
     libgeos-dev \
     libgdal-dev \
     curl \
-    build-essential
+    build-essential \
+    jq
 
 ## cypress.io dependencies
 RUN apt-get install -y \
